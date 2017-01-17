@@ -1,4 +1,12 @@
 {
-    "name": "generator-react-module",
-    "version": "0.0.1"
+  "name": "generator-react-module",
+  "version": "0.1.0",
+  "description": "react hot reload",
+  "files": [
+    "generators"
+  ],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
 }
