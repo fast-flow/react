@@ -26,6 +26,7 @@ npm run dev
 ```shell
 npm run gh
 npm run gh-push
+npm run s
 ```
 
 ### publish npm

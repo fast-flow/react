@@ -10,8 +10,10 @@
     "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
     "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
     "gh": "fis3 release gh -c -d ./output -r ./ -f config/fis-conf.js && fis3 release ghversion -c -d ./output -r ./ -f config/fis-conf.js && webpack --progress --config ./config/webpack.gh.js && webpack --progress --config ./config/webpack.ghversion.js",
+    "gh-push": "node config/gh-push.js",
     "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js",
-    "hot": "node config/server.js"
+    "hot": "node config/server.js",
+    "s": "node config/static-server.js"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -35,6 +37,7 @@
     "fis-parser-less-2.x": "^0.1.4",
     "fis3-hook-relative": "^2.0.0",
     "fis3-parser-translate-es3ify": "^0.0.3",
+    "gh-pages": "^0.12.0",
     "glob": "^7.1.1",
     "graceful-fs": "^4.1.11",
     "hash-to-port": "^1.0.0",

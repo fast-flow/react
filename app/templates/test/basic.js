@@ -40,3 +40,4 @@ const app = TestUtils.renderIntoDocument(<App/>);
 expect(TestUtils.scryRenderedDOMComponentsWithClass(app, 'r-alert').length).to.eql(1)
 TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(app, 'r-alert-close'))
 expect(TestUtils.scryRenderedDOMComponentsWithClass(app, 'r-alert').length).to.eql(0)
+console.info('basic.js test done')
