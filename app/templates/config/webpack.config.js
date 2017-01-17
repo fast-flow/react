@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var extend = require('extend')
+var iPackage = require('../package.json')
 /**
  * @param {object} settings.externals - 使用全局变量替换模块
  * @param {array|object} settings.entry - 入口文件
@@ -41,23 +42,7 @@ module.exports = function (settings) {
                 {
                     test: /\.js$/,
                     loaders: settings.firstJsLoader.concat(
-                        ['babel?' + JSON.stringify({
-                            presets: [
-                                "es2015"
-                            ],
-                            plugins: [
-                                [
-                                   "transform-react-jsx",
-                                   {pragma: 'require("react").createElement'}
-                                ],
-                                "transform-flow-strip-types",
-                                "syntax-flow",
-                                "syntax-jsx",
-                                "transform-react-display-name",
-                                "transform-decorators-legacy",
-                                "transform-class-properties"
-                            ]
-                        })]
+                        ['babel?' + JSON.stringify(require('./babel.js'))]
                     ).concat(settings.lastJsLoader)
                     ,
                     exclude: /node_modules/
@@ -74,6 +59,13 @@ module.exports = function (settings) {
                 { test: /\.(png|jpg|jpeg|gif)(\?v=\d+\.\d+\.\d+)?$/i, loader: 'url?limit=1' },
                 { test: /\.json$/, loader: 'json' }
             ]
+        },
+        resolve: {
+            alias: (function () {
+                var alias = {}
+                alias[iPackage.name] = path.join(__dirname, '../')
+                return alias
+            })()
         }
     }
     return config

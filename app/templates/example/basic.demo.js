@@ -1,5 +1,5 @@
 var React = require('react')
-var Alert = require('../lib/index.js').default
+var Alert = require('name').default
 var App = React.createClass({
     getInitialState() {
         return {

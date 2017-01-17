@@ -17,10 +17,8 @@
 </style>
 </head>
 <body>
-<a href="/README.md">Home</a> | <a href="/example/README.md">Example</a> | <a href="/test/index.html">Test</a>
+<a href="/<%- PACKAGE.version %>/index.html">Home</a> | <a href="/<%- PACKAGE.version %>/example/index.html">Example</a> | <a href="/<%- PACKAGE.version %>/test/index.html">Test</a>
 <%- content %>
-<!--jdists trigger="dev" >
-   <script src="/example/dev.js" ></script>
-</jdists-->
+<script src="/example/dev.js?version=<%- PACKAGE.version %>" ></script>
 </body>
 </html>

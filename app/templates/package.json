@@ -1,5 +1,6 @@
 {
   "name": "name",
+  "version": "0.0.1",
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "0.14.8",
@@ -8,6 +9,8 @@
   "scripts": {
     "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
     "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
+    "gh": "fis3 release gh -c -d ./output -r ./ -f config/fis-conf.js && fis3 release ghversion -c -d ./output -r ./ -f config/fis-conf.js && webpack --progress --config ./config/webpack.gh.js && webpack --progress --config ./config/webpack.ghversion.js",
+    "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js",
     "hot": "node config/server.js"
   },
   "devDependencies": {
@@ -29,9 +32,9 @@
     "express": "^4.14.0",
     "extend": "^3.0.0",
     "file-loader": "^0.9.0",
-    "fis-parser-jdists": "^2.0.1",
     "fis-parser-less-2.x": "^0.1.4",
     "fis3-hook-relative": "^2.0.0",
+    "fis3-parser-translate-es3ify": "^0.0.3",
     "glob": "^7.1.1",
     "graceful-fs": "^4.1.11",
     "hash-to-port": "^1.0.0",
@@ -41,12 +44,12 @@
     "less-plugin-functions": "^0.0.2",
     "markrun": "^0.15.0",
     "markrun-themes": "^0.0.6",
+    "open": "^0.0.5",
     "react-addons-test-utils": "0.14.8",
     "react-hot-loader": "^1.3.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
-    "webpack-compiler": "^0.1.0",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0"
   }
