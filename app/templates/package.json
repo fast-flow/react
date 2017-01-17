@@ -1,0 +1,53 @@
+{
+  "name": "name",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "0.14.8",
+    "react-dom": "0.14.8"
+  },
+  "scripts": {
+    "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
+    "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
+    "hot": "node config/server.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-plugin-transform-react-display-name": "^6.8.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-plugin-transform-react-jsx-source": "^6.9.0",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "del": "^2.2.2",
+    "es3ify-loader": "^0.2.0",
+    "expect.js": "^0.3.1",
+    "express": "^4.14.0",
+    "extend": "^3.0.0",
+    "file-loader": "^0.9.0",
+    "fis-parser-jdists": "^2.0.1",
+    "fis-parser-less-2.x": "^0.1.4",
+    "fis3-hook-relative": "^2.0.0",
+    "glob": "^7.1.1",
+    "graceful-fs": "^4.1.11",
+    "hash-to-port": "^1.0.0",
+    "is-absolute-url": "^2.1.0",
+    "json-loader": "^0.5.4",
+    "less-loader": "^2.2.3",
+    "less-plugin-functions": "^0.0.2",
+    "markrun": "^0.15.0",
+    "markrun-themes": "^0.0.6",
+    "react-addons-test-utils": "0.14.8",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-compiler": "^0.1.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  }
+}
