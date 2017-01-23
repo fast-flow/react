@@ -17,7 +17,7 @@ if (fis.project.currentMedia() === 'ghversion') {
     fis.config.data.options.d = outputPath
     console.log('Build: ' + outputPath)
     fis.match('**', {
-        domain: iPackage.homepage.replace(/\/$/, '') + '/' + iPackage.version
+        domain:'/' + iPackage.version
     })
 }
 fis.match('{config/**,npm-debug.log,yarn.lock}', {
