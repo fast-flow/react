@@ -9,9 +9,9 @@ npm i -g fis3                   --registry=https://registry.npm.taobao.org
 ```
 
 ```shell
-vue init fast-flow/react-component mycomponent
+vue init fast-flow/react mycomponent
 ```
 
 ## Usage
 
-[./template/dev.md]()
+[./template/developers-to-read.md]()
