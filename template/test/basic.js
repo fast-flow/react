@@ -6,9 +6,9 @@
 // findRenderedComponentWithType ：与scryRenderedComponentsWithType用法相同，但只返回一个节点，如有零个或多个匹配的节点就报错
 // findAllInRenderedTree ：遍历当前组件所有的节点，只返回那些符合条件的节点
 
+require('console-polyfill')
 import TestUtils from 'react-addons-test-utils'
 import expect from "expect.js"
-
 var React = require('react')
 var {{ componentname name }} = require('{{ name }}').default
 var App = React.createClass({
