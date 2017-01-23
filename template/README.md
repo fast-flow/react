@@ -7,6 +7,6 @@
 [![NPM downloads](http://img.shields.io/npm/dm/{{ name }}.svg?style=flat)](https://npmjs.org/package/{{ name }})
 
 
-[{{ homepage }}/example](![./example/preview.png](Preview))
+[![./example/preview.png](Preview)]({{ homepage }}/example)
 
-[{{ homepage }}](Online)
+[Online]({{ homepage }})

@@ -15,4 +15,4 @@ vue init fast-flow/react mycomponent
 
 ## Usage
 
-[./template/developers-to-read.md](developers-to-read.md)
+[developers-to-read.md](./template/developers-to-read.md)
