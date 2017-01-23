@@ -4,13 +4,13 @@
 // findRenderedDOMComponentWithTag ：与scryRenderedDOMComponentsWithTag用法相同，但只返回一个节点，如有零个或多个匹配的节点就报错
 // scryRenderedComponentsWithType ：找出所有符合指定子组件的节点
 // findRenderedComponentWithType ：与scryRenderedComponentsWithType用法相同，但只返回一个节点，如有零个或多个匹配的节点就报错
-// findAllInRenderedTree：遍历当前组件所有的节点，只返回那些符合条件的节点
+// findAllInRenderedTree ：遍历当前组件所有的节点，只返回那些符合条件的节点
 
 import TestUtils from 'react-addons-test-utils'
 import expect from "expect.js"
 
 var React = require('react')
-var Alert = require('../lib/index.js').default
+var {{ componentname name }} = require('{{ name }}').default
 var App = React.createClass({
     getInitialState() {
         return {
@@ -24,11 +24,11 @@ var App = React.createClass({
                 {
                     self.state.show?
                     (
-                        <Alert onClose={function() {
+                        <{{ componentname name }} onClose={function() {
                                 self.setState({
                                     show: false
                                 })
-                            }} >basic</Alert>
+                            }} >basic</{{ componentname name }}>
                     ):null
                 }
             </div>

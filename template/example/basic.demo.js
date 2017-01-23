@@ -1,5 +1,5 @@
 var React = require('react')
-var Alert = require('name').default
+var {{ componentname name }} = require('{{ name }}').default
 var App = React.createClass({
     getInitialState() {
         return {
@@ -13,11 +13,11 @@ var App = React.createClass({
                 {
                     self.state.show?
                     (
-                        <Alert onClose={function() {
+                        <{{ componentname name }} onClose={function() {
                                 self.setState({
                                     show: false
                                 })
-                            }} >basic</Alert>
+                            }} >basic</{{ componentname name }}>
                     ):null
                 }
             </div>
