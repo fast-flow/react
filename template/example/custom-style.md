@@ -14,4 +14,4 @@ html .alert--info {
 } -->
 [./custom-style.demo.js](./custom-style.demo.js)
 
-<div id="example__custom-style_node"></div>
+<div id="example__custom-style_node" class="fast-flow-demo">loading...</div>
