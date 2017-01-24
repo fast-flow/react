@@ -40,9 +40,12 @@ module.exports = {
     },
     helpers: {
         componentname: function (name) {
+            name = name.replace(/react/g,'').replace(/(_|-)/g, '').replace(/\..*$/,'')
+            if (name.length === 0) {
+                name = 'some'
+            }
             var capitalizeName = name[0].toUpperCase() + name.slice(1)
-            var name = capitalizeName.replace(/\..*$/,'').replace(/(_|-)/g, '')
-            return name
+            return capitalizeName
         }
     },
     completeMessage: "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run hot\n  npm run dev\n\nDocumentation can be found at {{ destDirName }}/developers-to-read.md"
