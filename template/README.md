@@ -10,3 +10,7 @@
 [![Preview](./example/preview.png)]({{ homepage }}/example)
 
 [Online]({{ homepage }})
+
+## Change log
+
+[CHANGELOG](./CHANGELOG.md)
