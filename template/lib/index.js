@@ -2,7 +2,7 @@ import "./index.css"
 import { Component } from "react"
 import props from "./props"
 import classNames from "classnames"
-class Demo extends Component {
+class {{ componentname name }} extends Component {
     render() {
         const self = this
         const pcls = self.props.prefixClassName
@@ -21,5 +21,5 @@ class Demo extends Component {
         )
     }
 }
-props(Demo)
-export default Demo
+props({{ componentname name }})
+export default {{ componentname name }}
