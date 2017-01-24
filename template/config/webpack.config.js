@@ -22,6 +22,7 @@ module.exports = function (settings) {
         lastPlugins: [],
         externals: {}
     }, settings)
+    settings.entry.unshift('babel-polyfill')
     var config = {
         devtool: settings.devtool,
         entry: settings.entry,

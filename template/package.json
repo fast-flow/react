@@ -22,7 +22,8 @@
     "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js"
   },
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
