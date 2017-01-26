@@ -2,7 +2,7 @@
   "name": "{{ name }}",
   "version": "{{ version }}",
   "description": "{{ description }}",
-  "repository": "{{ gitRepository }}/{{ gitUsername }}",
+  "repository": "{{ gitUsername }}/{{ gitRepository }}",
   "homepage": "{{ homepage }}",
   "gitUsername": "{{ gitUsername }}",
   "gitRepository": "{{ gitRepository }}",
