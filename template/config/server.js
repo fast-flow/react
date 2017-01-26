@@ -24,13 +24,7 @@ module.exports = function (settings) {
 
     app.use(require('webpack-hot-middleware')(compiler));
     app.use(express.static(__dirname + '/../output'))
-    app.use(function (req, res, next) {
-        var versionUrl = '/' + iPackage.version
-        if (req.path.indexOf(versionUrl) === 0) {
-            res.redirect(req.path.replace(versionUrl, ''))
-        }
-        next()
-    })
+    app.use(require('./connect-redirect.js'))
     console.log(__dirname + '/../output')
     app.listen(hotServerPort, function(err) {
       if (err) {

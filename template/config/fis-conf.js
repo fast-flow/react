@@ -12,12 +12,18 @@ if (clearMedia.indexOf(fis.project.currentMedia()) !== -1) {
     del.sync(delPath)
     console.log('\n Deleted files and folders:\n', delPath.join('\n'));
 }
+if (fis.project.currentMedia() === 'gh') {
+    fis.match('**', {
+        domain:'/' + iPackage.gitRepository
+    })
+}
+
 if (fis.project.currentMedia() === 'ghversion') {
     var outputPath = './output/' + iPackage.version
     fis.config.data.options.d = outputPath
     console.log('Build: ' + outputPath)
     fis.match('**', {
-        domain:'/' + iPackage.version
+        domain:'/' + iPackage.gitRepository + '/' + iPackage.version
     })
 }
 fis.match('{config/**,npm-debug.log,yarn.lock}', {
@@ -70,7 +76,7 @@ else {
                                 var code = fs.readFileSync(fullpath, 'utf-8').toString()
                                 info.deps = info.deps || []
                                 info.deps.push(fullpath)
-                                code = highlight(code)
+                                code = highlight(code).trim()
                                 if (data.run) {
                                     code = code +'<script data-markrun-lastrun="true" src="'+ data.file + '"></script>'
                                 }

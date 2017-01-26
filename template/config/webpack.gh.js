@@ -4,6 +4,7 @@ var iPackage = require('../package.json')
 
 module.exports = require('./webpack.config')({
     entry: ['./example/dev'],
+    devtool: 'source-map',
     externals: {},
     lastPlugins: [
         new webpack.DefinePlugin({
@@ -18,7 +19,7 @@ module.exports = require('./webpack.config')({
     output: {
         path: path.join(__dirname, '../output'),
         filename: 'example/dev.js',
-        chunkFilename: '/__chunk/[id]-[name]-[hash]-[chunkhash].js',
-        publicPath: '/' + iPackage.version
+        chunkFilename: '/chunk/[id]-[name]-[chunkhash].js',
+        publicPath: '/' + iPackage.gitRepository + '/' + iPackage.version
     }
 })
