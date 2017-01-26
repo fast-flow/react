@@ -63,14 +63,14 @@ else {
                             PACKAGE: iPackage
                         },
                         replace: {
-                            pre: function (data, options, info) {
+                            pre: function (data, options, info, highlight) {
                                 var path = require('path')
                                 var fs = require('fs')
                                 var fullpath = path.join(path.dirname(info.filepath), data.file)
                                 var code = fs.readFileSync(fullpath, 'utf-8').toString()
                                 info.deps = info.deps || []
                                 info.deps.push(fullpath)
-                                code = '<pre class="markrun-source-pre" data-lang="js" >' + options.highlight(code) + '</pre>'
+                                code = highlight(code)
                                 if (data.run) {
                                     code = code +'<script data-markrun-lastrun="true" src="'+ data.file + '"></script>'
                                 }
