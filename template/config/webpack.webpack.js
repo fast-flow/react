@@ -1,7 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 module.exports = require('./webpack.config')({
-    entry: ['./example/dev'],
+    entry: ["babel-polyfill", './example/dev'],
     devtool: 'source-map',
     externals: {},
     output: {
