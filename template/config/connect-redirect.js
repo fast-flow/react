@@ -1,3 +1,4 @@
+var iPackage = require('../package.json')
 module.exports = function (req, res, next) {
     var versionUrl = '/' + iPackage.version
     var repositoryUrl = '/' + iPackage.gitRepository
