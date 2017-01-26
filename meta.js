@@ -48,5 +48,5 @@ module.exports = {
             return capitalizeName
         }
     },
-    completeMessage: "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run hot\n  npm run dev\n\nDocumentation can be found at {{ destDirName }}/developers-to-read.md"
+    completeMessage: "To get started:\n\n  cd {{destDirName}}\n  npm install # or yarn\n  npm run doc\n  npm run js\n\nDocumentation can be found at {{ destDirName }}/developers-to-read.md"
 }

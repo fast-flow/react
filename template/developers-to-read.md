@@ -5,10 +5,16 @@ http://github.com/fast-flow/react
 ### Development
 
 ```shell
-npm run dev
-# or npm run dev:debug
-npm run hot
-# npm run hot:debug
+npm run doc
+# or npm run doc:debug
+npm run js
+# npm run js:debug
+```
+
+### Test
+
+```shell
+npm run test
 ```
 
 ### Publish gh-pages

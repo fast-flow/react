@@ -12,16 +12,27 @@
     "react-dom": "0.14.8"
   },
   "scripts": {
-    "hot": "node config/hot-server.js",
-    "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
-    "hot:debug": "node config/webpack-server.js",
-    "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
+    "js": "node config/hot-server.js",
+    "doc": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
+    "js:debug": "node config/webpack-server.js",
+    "doc:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
     "gh": "fis3 release gh -c -d ./output -r ./ -f config/fis-conf.js && fis3 release ghversion -c -d ./output -r ./ -f config/fis-conf.js && webpack --progress --config ./config/webpack.gh.js && webpack --progress --config ./config/webpack.ghversion.js",
     "s": "node config/static-server.js",
     "gh-push": "node config/gh-push.js",
-    "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js"
+    "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js",
+    "test-ci": "./node_modules/jest/bin/jest.js",
+    "test": "./node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/test/styleMock.js"
+    }
   },
   "devDependencies": {
+    "jest": "^18.1.0",
+    "enzyme": "^2.7.1",
+    "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.22.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
