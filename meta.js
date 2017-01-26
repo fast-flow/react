@@ -1,3 +1,11 @@
+var componentname = function (name) {
+    name = name.replace(/react/g,'').replace(/(_|-)/g, '').replace(/\..*$/,'')
+    if (name.length === 0) {
+        name = 'some'
+    }
+    var capitalizeName = name[0].toUpperCase() + name.slice(1)
+    return capitalizeName
+}
 module.exports = {
     prompts: {
         name: {
@@ -14,7 +22,9 @@ module.exports = {
             type: 'string',
             required: true,
             message: 'Npm package description',
-            default: "React component"
+            default: function (data) {
+                return 'React,' + componentname(data.name) +'.Custom style!'
+            }
         },
         gitUsername: {
             type: 'string',
@@ -39,14 +49,7 @@ module.exports = {
         }
     },
     helpers: {
-        componentname: function (name) {
-            name = name.replace(/react/g,'').replace(/(_|-)/g, '').replace(/\..*$/,'')
-            if (name.length === 0) {
-                name = 'some'
-            }
-            var capitalizeName = name[0].toUpperCase() + name.slice(1)
-            return capitalizeName
-        }
+        componentname: componentname
     },
     completeMessage: "To get started:\n\n  cd {{destDirName}}\n  npm install # or yarn\n  npm run doc\n  npm run js\n\nDocumentation can be found at {{ destDirName }}/developers-to-read.md"
 }
