@@ -1,5 +1,7 @@
 # Basic
 
+1. [custom-style](./custom-style.md)
+
 <div id="example__basic_node" class="fast-flow-demo">loading...</div>
 
 <!--MR-R {
@@ -7,6 +9,3 @@
     file: './basic.demo.js'
 } -->
 [./basic.demo.js](./basic.demo.js)
-
-
-- [custom-style](./custom-style.md)
