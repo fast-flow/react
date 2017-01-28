@@ -64,7 +64,7 @@ module.exports = function (settings) {
         resolve: {
             alias: (function () {
                 var alias = {}
-                alias[iPackage.name] = path.join(__dirname, '../')
+                alias[iPackage.name] = path.join(__dirname, '../', iPackage.main || 'index.js')
                 return alias
             })()
         }
