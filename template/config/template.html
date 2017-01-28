@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="<%- keywords?keywords:title %>">
+    <meta name="keywords" content="<%= PACKAGE.keywords.join(","); %>">
     <meta name="description" content="<%- description?description:title %>">
     <title><%- title %></title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/markrun-themes@latest/vue.css" />

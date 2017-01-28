@@ -30,3 +30,7 @@ npm run gh-push
 npm run npm
 cd output && npm publish
 ```
+
+### Compound Command
+
+npm run test-ci && npm run gh && npm run gh-push && npm run npm && cd output && npm publish
