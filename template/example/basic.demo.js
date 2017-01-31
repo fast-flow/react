@@ -1,7 +1,7 @@
 var React = require('react')
 var {{ componentname name }} = require('{{ name }}').default
 var App = React.createClass({
-    getInitialState() {
+    getInitialState: function () {
         return {
             show: true
         }
