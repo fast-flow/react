@@ -86,6 +86,10 @@ else {
                     },
                     info
                 )
+                info.deps = info.deps || []
+                info.deps.forEach(function (filename) {
+                     file.cache.addDeps(filename)
+                })
                 html = html.replace(/href="([^"]+)"/g, function (all, url) {
                     if (!require('is-absolute-url')(url) && !/^\/\//.test(url)) {
                         url = url.replace(/README\.md$/,'index.html')
