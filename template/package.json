@@ -19,10 +19,11 @@
     "react-dom": "0.14.8"
   },
   "scripts": {
-    "js": "node config/hot-server.js",
     "doc": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
+    "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
+    "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
+    "js": "node config/hot-server.js",
     "js:debug": "node config/webpack-server.js",
-    "doc:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
     "gh": "fis3 release gh -c -d ./output -r ./ -f config/fis-conf.js && fis3 release ghversion -c -d ./output -r ./ -f config/fis-conf.js && webpack --progress --config ./config/webpack.gh.js && webpack --progress --config ./config/webpack.ghversion.js",
     "s": "node config/static-server.js",
     "gh-push": "node config/gh-push.js",
