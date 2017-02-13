@@ -13,6 +13,9 @@ module.exports = require('./webpack.config')({
         new webpack.optimize.UglifyJsPlugin({
            compress: {
                warnings: false
+           },
+           mangle: {
+               screw_ie8: false
            }
         })
     ],
