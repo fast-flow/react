@@ -1,5 +1,6 @@
 {
   "name": "{{ name }}",
+  "main": "lib/index.js",
   "version": "{{ version }}",
   "description": "{{ description }}",
   "repository": "{{ gitUsername }}/{{ gitRepository }}",
