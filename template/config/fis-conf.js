@@ -57,6 +57,9 @@ else {
                 var info = {
                     filepath: file.fullname
                 }
+                content = content.replace(/(\[.*?\]\((.*\.demo\.js)\))/gi, function (source, $1, $2) {
+                    return '<!--MR-R\n{type: "pre",file:"' + $2 + '"}\n-->\n\n' + $1
+                })
                 var html = markrun(
                     content,
                     {

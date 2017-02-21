@@ -12,8 +12,4 @@ html .alert--info {
 
 <div id="example__custom-style_node" class="fast-flow-demo">loading...</div>
 
-<!--MR-R {
-    type: "pre",
-    file: './custom-style.demo.js'
-} -->
 [./custom-style.demo.js](./custom-style.demo.js)
