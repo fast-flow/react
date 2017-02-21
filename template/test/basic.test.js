@@ -1,5 +1,5 @@
 import { Component } from "react"
-import {{ componentname name }} from "../index"
+import {{ componentname name }} from "../lib/index"
 import { shallow, mount, render } from "enzyme"
 
 it('className', function () {
