@@ -29,7 +29,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-sourcemap-loader',
       'karma-chrome-launcher',
-      'karma-phantomjs-launcher'
+      'karma-phantomjs-launcher',
+      'karma-sauce-launcher'
     ],
 
 
@@ -43,5 +44,6 @@ module.exports = function(config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
+    processKillTimeout: 1200000
   })
 };
