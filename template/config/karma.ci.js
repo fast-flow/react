@@ -16,21 +16,21 @@ module.exports = function (config) {
       frameworks: ['jasmine'],
       reporters: ['progress', 'saucelabs'],
       sauceLabs: {
-        recordVideo: true,
+        recordVideo: false,
         testName: iPackage.name,
-        recordScreenshots: true,
+        recordScreenshots: false,
         connectOptions: {
+          'no-ssl-bump-domains': 'all', // Ignore SSL error on Android emulator
           port: 5757,
           logfile: 'sauce_connect.log'
         },
         public: 'public'
       },
-      // Increase timeout in case connection in CI is slow
-      captureTimeout: 12000000,
+      captureTimeout: 300000,
+      browserNoActivityTimeout: 300000,
       customLaunchers: devConfig.customLaunchers,
       browsers: Object.keys(devConfig.customLaunchers),
-      singleRun: true,
-      autoWatch: false
+      singleRun: true
   }
   var ciConfig = extend(true, karmaConf(config), sauceLabsConfig)
   config.set(ciConfig)

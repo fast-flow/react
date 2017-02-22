@@ -1,8 +1,9 @@
 import { Component } from "react"
 import {{ componentname name }} from "../lib/index"
-import { shallow, mount, render } from "enzyme"
+import Test from 'react-addons-test-utils'
 
 it('className', function () {
-    const app = mount(<{{ componentname name }} className="myclass" />)
-    expect(app.find('.myclass').length).toEqual(1)
+    var app = Test.renderIntoDocument(<{{ componentname name }} className="myclass" />)
+    expect(Test.scryRenderedDOMComponentsWithClass(app, 'myclass').length)
+        .toEqual(1)
 })
