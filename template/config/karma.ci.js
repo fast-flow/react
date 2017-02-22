@@ -26,8 +26,8 @@ module.exports = function (config) {
         },
         public: 'public'
       },
-      captureTimeout: 60000,
-      browserNoActivityTimeout: 300000,
+      captureTimeout: (1000*60)*5,
+      browserNoActivityTimeout: (1000*60)*5,
       customLaunchers: devConfig.customLaunchers,
       browsers: Object.keys(devConfig.customLaunchers),
       singleRun: true
