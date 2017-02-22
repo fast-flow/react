@@ -16,6 +16,9 @@ module.exports = require('./webpack.config')({
            },
            mangle: {
                screw_ie8: false
+           },
+           output: {
+               screw_ie8: false
            }
         })
     ],
