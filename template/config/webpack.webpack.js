@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 module.exports = require('./webpack.config')({
     entry: ['./example/dev'],
-    devtool: 'source-map',
+    devtool: '#inline-source-map',
     externals: {},
     output: {
         path: path.join(__dirname, '../output'),
