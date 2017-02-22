@@ -40,7 +40,7 @@ module.exports = {
         sl_mac_safari: {
             base: 'SauceLabs',
             browserName: 'safari',
-            platform: 'OS X 10.10'
+            platform: 'Windows 7'
         },
         /*
         // mobile
