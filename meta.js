@@ -1,4 +1,5 @@
 var componentname = function (name) {
+    name = name || ''
     name = name.replace(/react/g,'').replace(/(_|-)/g, '').replace(/\..*$/,'')
     if (name.length === 0) {
         name = 'some'
