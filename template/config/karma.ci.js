@@ -8,10 +8,13 @@ var devConfig = require('../dev-config.js')
 var extend = require('extend')
 var karmaConf = require('./karma.conf').conf
 module.exports = function (config) {
-  if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
-    console.log('Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.')
-    process.exit(1)
-  }
+if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
+    var sauceUserErrorMsg = 'Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.'
+    console.error('---------------')
+    console.error(sauceUserErrorMsg)
+    console.error('---------------')
+    throw new Error(sauceUserErrorMsg)
+ }
   var sauceLabsConfig = {
       frameworks: ['jasmine'],
       reporters: ['progress', 'saucelabs'],
