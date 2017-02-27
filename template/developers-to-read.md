@@ -33,6 +33,8 @@ cd output && npm publish
 
 ### Release
 
+> Please use Travis build the job, and then released
+
 ```shell
 # git push gh-pages  & npm publish
 npm run release
