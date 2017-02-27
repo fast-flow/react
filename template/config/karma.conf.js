@@ -9,11 +9,7 @@ var karmaConf = function(config) {
       basePath: '../',
       frameworks: ['jasmine'],
       files: [
-        require.resolve('es5-shim/es5-shim.js'),
-        require.resolve('es5-shim/es5-sham.js'),
-        require.resolve('html5shiv/dist/html5shiv.js'),
-        require.resolve('console-polyfill/index.js'),
-        require.resolve('es6-promise/dist/es6-promise.js'),
+        require.resolve('../example/polyfill-lt-ie10.js'),
         'test/**/*.js'
       ],
       preprocessors: {
