@@ -26,6 +26,11 @@ module.exports = {
             platform: 'Windows 8.1',
             version: '11'
         },
+        // sl_edge: {
+        //     base: 'SauceLabs',
+        //     browserName: 'MicrosoftEdge',
+        //     platform: 'Windows 10'
+        // },
         // the cool kids
         sl_chrome: {
             base: 'SauceLabs',
@@ -42,6 +47,11 @@ module.exports = {
             browserName: 'safari',
             platform: 'Windows 7'
         },
+        // sl_mac_safari: {
+        //     base: 'SauceLabs',
+        //     browserName: 'safari',
+        //     platform: 'OS X 10.10'
+        // },
         /*
         // mobile
         sl_ios_safari_8: {

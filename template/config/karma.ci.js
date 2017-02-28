@@ -19,6 +19,8 @@ if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
       frameworks: ['jasmine'],
       reporters: ['progress', 'saucelabs'],
       sauceLabs: {
+        testName: iPackage.name + ' unit tests',
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
         recordVideo: false,
         testName: iPackage.name,
         recordScreenshots: false,
@@ -27,7 +29,8 @@ if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
           port: 5757,
           logfile: 'sauce_connect.log'
         },
-        public: 'public'
+        public: 'public',
+        build: process.env.CIRCLE_BUILD_NUM || process.env.SAUCE_BUILD_ID || Date.now()
       },
       captureTimeout: (1000*60)*5,
       browserNoActivityTimeout: (1000*60)*5,

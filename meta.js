@@ -50,7 +50,12 @@ module.exports = {
         }
     },
     helpers: {
-        componentname: componentname
+        componentname: componentname,
+        saucelabsname: function (name) {
+            name = name || ''
+            name = name.replace(/\./g,'_')
+            return name
+        }
     },
     completeMessage: "To get started:\n\n  cd {{destDirName}}\n  npm install --registry=https://registry.npm.taobao.org # or yarn\n  npm run doc\n  npm run js\n\nDocumentation can be found at {{ destDirName }}/developers-to-read.md"
 }
