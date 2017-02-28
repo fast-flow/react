@@ -30,7 +30,7 @@ module.exports = {
         gitUsername: {
             type: 'string',
             required: true,
-            message: 'Github username'
+            message: 'Github username or organization'
         },
         gitRepository: {
             type: 'string',
@@ -38,6 +38,17 @@ module.exports = {
             message: 'Git repository',
             default: function (data) {
                 return data.name
+            }
+        },
+        maintainerAccount: {
+            type: 'string',
+            message: 'Maintainer account (Github username, is not organization)'
+        },
+        maintainerFullName: {
+            type: 'string',
+            message: 'Maintainer full name (example: Michael Jackson)',
+            default: function (data) {
+                return data.maintainerAccount
             }
         },
         homepage: {
