@@ -23,9 +23,17 @@
     img {border:none;}
     </style>
     <!-- Polyfills -->
+
+    <!-- console-polyfill es5-shim es5-shim/es5-sham es6-shim es6-shim/es6-sham html5shiv media-match -->
     <!--[if lt IE 10]>
-    <script src="/example/polyfill-ie8.js"></script>
+    <script src="/example/polyfill-lt-ie10.js"></script>
     <![endif]-->
+
+    <!-- es6-shim es6-shim/es6-sham-->
+    <!--[if lte IE 11]>
+    <script src="/example/polyfill-lte-ie11.js"></script>
+    <![endif]-->
+    <script src="/example/es6-promise.auto.js"></script>
 </head>
 <body>
 	<div class="markdown-header">

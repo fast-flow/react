@@ -32,7 +32,6 @@ module.exports = function (settings) {
         ).concat(settings.lastPlugins),
         module: {
             postLoaders: [
-                // 如果不需要兼容IE8请去掉 es3ify
                 {
                     test: /\.(js|md)$/,
                     loaders: ['es3ify']

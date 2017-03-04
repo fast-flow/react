@@ -10,6 +10,8 @@ var karmaConf = function(config) {
       frameworks: ['jasmine'],
       files: [
         require.resolve('../example/polyfill-lt-ie10.js'),
+        require.resolve('../example/polyfill-lte-ie11.js'),
+        require.resolve('../example/es6-promise.auto.js'),
         'test/**/*.js'
       ],
       preprocessors: {
