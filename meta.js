@@ -42,7 +42,10 @@ module.exports = {
         },
         maintainerAccount: {
             type: 'string',
-            message: 'Maintainer account (Github username, is not organization)'
+            message: 'Maintainer account (Github username, is not organization)',
+            default: function (data) {
+                return data.gitUsername
+            }
         },
         maintainerFullName: {
             type: 'string',
