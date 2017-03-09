@@ -1,4 +1,7 @@
 module.exports = {
+    testFile: [
+        'test/**/*.js'
+    ],
     // https://saucelabs.com/platforms
     customLaunchers: {
         // ie family

@@ -4,6 +4,7 @@ var iPackage = require('../package.json')
 var hashToPort = require('hash-to-port')
 var testServerPort = hashToPort(iPackage.name + 'fast-flow/test:server')
 var webpackConfig = require('./webpack.karma')
+var devConfig = require('../dev-config')
 var karmaConf = function(config) {
     return {
       basePath: '../',
@@ -11,9 +12,8 @@ var karmaConf = function(config) {
       files: [
         require.resolve('../example/polyfill-lt-ie10.js'),
         require.resolve('../example/polyfill-lte-ie11.js'),
-        require.resolve('../example/es6-promise.auto.js'),
-        'test/**/*.js'
-      ],
+        require.resolve('../example/es6-promise.auto.js')
+      ].concat(devConfig.testFile),
       preprocessors: {
         // add webpack as preprocessor
         'lib/**/*.js': ['webpack', 'sourcemap'],
