@@ -1,6 +1,6 @@
 module.exports = {
     testFile: [
-        'test/**/*.js'
+        'test/**/*.test.js'
     ],
     // https://saucelabs.com/platforms
     customLaunchers: {
