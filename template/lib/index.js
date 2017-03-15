@@ -1,5 +1,6 @@
 import "./index.css"
 import { Component } from "react"
+import util from "util.react"
 import props from "./props"
 import classNames from "classnames"
 class {{ componentname name }} extends Component {
@@ -9,7 +10,7 @@ class {{ componentname name }} extends Component {
         return (
             <div className={classNames({
                     [`${pcls}`]: true,
-                    [`${self.props.className}`]: self.props.className
+                    [util.themes(self.props)]: true
                 })} >
                 <div className={`${pcls}-cnt`}>
                     {self.props.children}

@@ -1,9 +1,9 @@
 # Custom style
 
-If you want to completely customize the style,you need a reference [lib/index.css](../lib/index.css),and using the props.className props.prefixClassName.
+If you want to completely customize the style,you need a reference [lib/index.css](../lib/index.css),and using the props.themes props.prefixClassName.
 
 ````css
-html .alert--info {
+html .alert--themes-info {
     border-color: #aaa;
     background-color: #eee;
     color:#333;

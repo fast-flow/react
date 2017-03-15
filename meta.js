@@ -1,3 +1,4 @@
+var exec = require('child_process').execSync
 var componentname = function (name) {
     name = name || ''
     name = name.replace(/react/g,'').replace(/(_|-)/g, '').replace(/\..*$/,'')
@@ -6,6 +7,19 @@ var componentname = function (name) {
     }
     var capitalizeName = name[0].toUpperCase() + name.slice(1)
     return capitalizeName
+}
+var getUser = function () {
+    var name
+    var email
+
+    try {
+        name = exec('git config --get user.name')
+        email = exec('git config --get user.email')
+    } catch (e) {}
+
+    name = name && JSON.stringify(name.toString().trim()).slice(1, -1)
+    email = email && (' <' + email.toString().trim() + '>')
+    return (name || '') + (email || '')
 }
 module.exports = {
     prompts: {
@@ -30,7 +44,10 @@ module.exports = {
         gitUsername: {
             type: 'string',
             required: true,
-            message: 'Github username or organization'
+            message: 'Github username or organization',
+            default: function (data) {
+                return getUser().replace(/\s.*/,'')
+            }
         },
         gitRepository: {
             type: 'string',

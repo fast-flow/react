@@ -4,12 +4,12 @@ export default function (component) {
     extend(true, component, {
         defaultProps: {
             prefixClassName: 'r-alert',
-            className: '',
+            themes: '',
             onClose: function () {}
         },
         propTypes: {
             prefixClassName: PropTypes.string,
-            className: PropTypes.string,
+            themes: PropTypes.string,
             onClose: PropTypes.func
         }
     })
