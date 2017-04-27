@@ -6,6 +6,11 @@
 
 ## Basic
 
-<div id="example__basic_node" class="fast-flow-demo">loading...</div>
-
-[./basic.demo.js](./basic.demo.js)
+````replace
+{
+    title: 'basic',
+    html: '<div id="example__basic_node" >loading...</div>',
+    desc: 'describe',
+    file: './basic.demo.js'
+}
+````

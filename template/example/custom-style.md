@@ -12,6 +12,12 @@ html .r-alert--themes-info {
 }
 ````
 
-<div id="example__custom-style_node" class="fast-flow-demo">loading...</div>
 
-[./custom-style.demo.js](./custom-style.demo.js)
+````replace
+{
+    title: 'Custom style',
+    html: '<div id="example__custom-style_node" >loading...</div>',
+    desc: 'describe',
+    file: './custom-style.demo.js'
+}
+````
