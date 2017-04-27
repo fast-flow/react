@@ -8,6 +8,7 @@
     <meta name="description" content="<%- description?description:title %>">
     <title><%- title %></title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/markrun-themes@latest/vue.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/markrun-themes@latest/box.css" />
     <style>.hljs{display:block;overflow-x:auto;padding:0.5em;color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}.hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}</style>
     <style>
     .markrun {
@@ -21,113 +22,6 @@
         margin-top: 10px;
     }
     img {border:none;}
-    .markrun-box {
-        border:1px solid #DDD;
-        border-radius: .2em;
-        background-color:white;
-        margin-bottom: 1em;
-    }
-    .markrun-box:hover {
-        box-shadow: 0px 0px 5px rgba(11,11,11,.2);
-    }
-    .markrun-box-preview-node {
-        padding: 10px;
-    }
-    .markrun-box-preview-doc-desc {
-        padding: 10px;
-    }
-    .markrun-box-preview-doc {
-        font-size: 14px;
-    }
-    .markrun-box-preview-doc-title {
-        position: relative;
-        text-indent: 1em;
-    }
-    .markrun-box-preview-doc-title:before {
-        position: absolute;
-        left:0;
-        top:50%;
-        margin-right: -0.4px;
-        width: 100%;
-        content: ' ';
-        display: block;
-        overflow: hidden;
-        height: 0;
-        border-bottom: 1px solid #DDD;
-    }
-    .markrun-box-preview-doc-title-text {
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        background-color:white;
-        padding-left: .5em;
-        padding-right: .5em;
-    }
-    .markrun-box-toggle {
-        margin-top:-15px;
-        position: relative;
-        display: block;
-        width: 100%;
-        cursor: pointer;
-        height: 15px;
-        line-height: 15px;
-        cursor: pointer;
-        overflow: hidden;
-        text-align: center;
-        background-image:linear-gradient(0deg, rgba(111,111,111,.1), rgba(0,0,0,0));
-    }
-    .markrun-box-toggle:after {
-        position: absolute;
-        left:50%;
-        top:3px;
-        margin-left: -5px;
-        content: ' ';
-        width: 5px;
-        height: 5px;
-        text-align: cetner;
-        content: " ";
-        display: inline-block;
-        border: 1px solid #AAA;
-        border-top-width: 0;
-        border-right-width: 0;
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-    .markrun-box-code {
-        position: relative;
-        overflow: auto;
-        border-top: 1px solid #EEE;
-    }
-    .markrun-box-code-source {
-        max-height: 8em;
-    }
-    .markrun-box-code-toggle:hover:after {
-        border-color:#999;
-    }
-    .markrun-box-code-source {
-        padding:1em;
-        margin: 0;
-    }
-    .markrun-box-code-copy {
-        position: absolute;
-        top:.5em;
-        right: .5em;
-        font-size: 12px;
-        color:#AAA;
-        cursor: pointer;
-    }
-    .markrun-box-code-copy:hover {
-        color:#888;
-    }
-    html .markrun-box--open .markrun-box-code-source {
-        max-height: auto;
-    }
-    html .markrun-box--open .markrun-box-toggle{
-        transform: rotate(180deg);
-        background-image:none;
-    }
     </style>
     <!-- Polyfills -->
 
@@ -183,28 +77,7 @@
         document.getElementById("markrunCurrentPageTitle").innerHTML = document.getElementsByTagName("h1")[0].innerHTML
     }
     </script>
-    <script src="https://unpkg.com/clipboard@1.6.1" ></script>
-    <script>
-    Array.prototype.forEach.call(document.getElementsByClassName('markrun-box-toggle'), function(node){
-       node.onclick = function () {
-           var className = this.parentElement.getAttribute('class')
-            var rOnClass = /markrun-box--open/g
-    		if (rOnClass.test(className)) {
-    			className.replace(rOnClass, '')
-            }
-    		else {
-    			className = className + ' markrun-box--open'
-    		}
-    		this.parentElement.setAttribute('class', className)
-       }
-    })
-    Array.prototype.forEach.call(document.getElementsByClassName('markrun-box-code-copy'), function(node){
-       var clipboard = new Clipboard(node, {
-           target: function (trigger) {
-               return trigger.nextElementSibling
-           }
-       })
-    })
-    </script>
+    <script src="https://unpkg.com/clipboard@1.6.1/dist/clipboard.min.js" ></script>
+    <script src="https://unpkg.com/markrun-themes@latest/box.js"></script>
 </body>
 </html>
