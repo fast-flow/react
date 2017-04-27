@@ -73,7 +73,7 @@ else {
                             PACKAGE: iPackage
                         },
                         compile: {
-                            'replace': require('markrun-themes/box-compile-replace.js')
+                            'demo': require('markrun-themes/box-compile-replace.js')
                        },
                         replace: {
                             pre: function (data, options, info, highlight) {

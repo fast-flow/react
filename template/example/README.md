@@ -6,7 +6,7 @@
 
 ## Basic
 
-````replace
+````demo
 {
     title: 'basic',
     html: '<div id="example__basic" >loading...</div>',

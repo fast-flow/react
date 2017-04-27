@@ -13,7 +13,7 @@ html .r-alert--themes-info {
 ````
 
 
-````replace
+````demo
 {
     title: 'Custom style',
     html: '<div id="example__custom-style" >loading...</div>',
