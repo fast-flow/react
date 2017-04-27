@@ -16,7 +16,7 @@ html .r-alert--themes-info {
 ````replace
 {
     title: 'Custom style',
-    html: '<div id="example__custom-style_node" >loading...</div>',
+    html: '<div id="example__custom-style" >loading...</div>',
     desc: 'describe',
     file: './custom-style.demo.js'
 }

@@ -8,7 +8,7 @@ var render = ReactDOM.render
         Demo = Demo.default || Demo
         render(<Demo />, node)
     })
-})(document.getElementById('example__basic_node'))
+})(document.getElementById('example__basic'))
 
 // custom-style
 ;(function (node) {
@@ -17,4 +17,4 @@ var render = ReactDOM.render
         Demo = Demo.default || Demo
         render(<Demo />, node)
     })
-})(document.getElementById('example__custom-style_node'))
+})(document.getElementById('example__custom-style'))
