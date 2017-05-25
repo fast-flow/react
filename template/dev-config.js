@@ -1,4 +1,26 @@
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
 module.exports = {
+    mockServer: function (app) {
+        app.get('/upload', function (req, res) {
+            res.send(
+                '<form action="/upload" method="post" enctype="multipart/form-data"  >' +
+                '    <input type="file" name="file" />' +
+                '    <button type="submit" >submit</button>' +
+                '</form>'
+            )
+        })
+        app.post('/upload', multipartMiddleware, function(req, res) {
+            console.log(req.body, req.files)
+            res.send({
+                status: 'success',
+                data: {
+                    id: 'id' + parseInt(Math.random()*1000),
+                    files: req.files
+                }
+            })
+        })
+    },
     testFile: [
         'test/**/*.test.js'
     ],
