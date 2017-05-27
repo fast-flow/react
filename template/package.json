@@ -34,12 +34,6 @@
     "test": "./node_modules/karma/bin/karma start ./config/karma.conf.js --browsers Chrome",
     "release": "npm run gh && npm run gh-push && npm run npm && cd output && npm publish"
   },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__test__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__test__/styleMock.js"
-    }
-  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-polyfill": "^6.22.0",
