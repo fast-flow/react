@@ -2,7 +2,13 @@
 
 http://github.com/fast-flow/react
 
-### Development
+## Install
+
+```shell
+yarn global add fis3 nodemon webpack@1.13.2
+```
+
+## Development
 
 ```shell
 npm run dev
@@ -11,27 +17,28 @@ npm run js
 # npm run js:debug
 ```
 
-### Test
+## Test
 
 ```shell
 npm run test
 ```
 
-### Publish gh-pages
+## Publish gh-pages
+
 ```shell
 npm run gh
 npm run s
 npm run gh-push
 ```
 
-### Publish npm
+## Publish npm
 
 ```shell
 npm run npm
 cd output && npm publish
 ```
 
-### Release
+## Release
 
 > Please use Travis build the job, and then released
 
@@ -40,11 +47,11 @@ cd output && npm publish
 npm run release
 ```
 
-### Automated Builds
+## Automated Builds
 
 You can use travis & saucelabs test your code.
 
-#### Travis environment Variables
+### Travis environment Variables
 
 [travis](https://travis-ci.org/)
 
