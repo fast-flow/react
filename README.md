@@ -3,10 +3,7 @@
 ## Installation
 
 ```shell
-npm i -g vue-cli --registry=https://registry.npm.taobao.org
-# Mac:
-#    sudo npm i -g vue-cli --registry=https://registry.npm.taobao.org
-npm i -g fis3 --registry=https://registry.npm.taobao.org
+yarn global add fis3 nodemon vue-cli webpack@1.13.2
 ```
 
 ```shell
