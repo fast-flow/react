@@ -2,7 +2,13 @@
 
 http://github.com/fast-flow/react
 
-### Development
+## Install
+
+```shell
+yarn global add fis3 nodemon webpack@1.13.2
+```
+
+## Development
 
 ```shell
 npm run dev
@@ -11,27 +17,20 @@ npm run js
 # npm run js:debug
 ```
 
-### Test
+## dev-config.js
+
+Read `./dev-config.js`
+
+## Test
 
 ```shell
 npm run test
+files=test/required.test.js npm run test
+npm run test:ci
+SAUCE_USERNAME=**** SAUCE_ACCESS_KEY=********-****-****-****-******** npm run test:ci
 ```
 
-### Publish gh-pages
-```shell
-npm run gh
-npm run s
-npm run gh-push
-```
-
-### Publish npm
-
-```shell
-npm run npm
-cd output && npm publish
-```
-
-### Release
+## Release
 
 > Please use Travis build the job, and then released
 
@@ -40,11 +39,26 @@ cd output && npm publish
 npm run release
 ```
 
-### Automated Builds
+## Publish gh-pages
+
+```shell
+npm run gh
+npm run s
+npm run gh-push
+```
+
+## Publish npm
+
+```shell
+npm run npm
+cd output && npm publish
+```
+
+## Automated Builds
 
 You can use travis & saucelabs test your code.
 
-#### Travis environment Variables
+### Travis environment Variables
 
 [travis](https://travis-ci.org/)
 

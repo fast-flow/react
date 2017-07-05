@@ -2,7 +2,7 @@
 
 If you want to completely customize the style,you need a reference [lib/index.css](../lib/index.css),and using the props.themes props.prefixClassName.
 
-> You must read   [component-develop-guide:encapsulation](https://github.com/nimojs/component-develop-guide/blob/master/encapsulation.md)
+> You must read [component-develop-guide:encapsulation](https://github.com/nimojs/encapsulation)
 
 ````css
 html .r-alert--themes-info {
