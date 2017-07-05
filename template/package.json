@@ -85,7 +85,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.2",
     "karma-sauce-launcher": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.2",
     "es5-shim": "^4.5.9",
     "es6-promise": "^4.0.5",
     "markrun-themes": "0.1.2",
