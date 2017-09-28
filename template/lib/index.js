@@ -1,7 +1,7 @@
 import "./index.css"
 import { Component } from "react"
 import util from "util.react"
-import props from "./props"
+import setProps from "./props"
 import classNames from "classnames"
 class {{ componentname name }} extends Component {
     render() {
@@ -22,5 +22,5 @@ class {{ componentname name }} extends Component {
         )
     }
 }
-props({{ componentname name }})
+setProps({{ componentname name }})
 export default {{ componentname name }}
