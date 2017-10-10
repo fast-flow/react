@@ -1,4 +1,4 @@
-# react-module
+# react-component
 
 ## Installation
 
