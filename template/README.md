@@ -34,7 +34,7 @@ npm install {{ name }} --save
   <tbody>
     <tr>
       <td align="center">
-        <a href="https://github.com/{{ maintainerAccount }}"><img width="150 height="150" src="https://github.com/{{ maintainerAccount }}.png?s=150" /></a>
+        <a href="https://github.com/{{ maintainerAccount }}"><img width="150 height="150" src="https://github.com/{{ maintainerAccount }}.png?s=150" style="border-radius:.2em;" /></a>
         <br>
         <a href="https://github.com/{{ maintainerAccount }}">{{ maintainerFullName }}</a>
       </td>
